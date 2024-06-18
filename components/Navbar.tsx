@@ -18,7 +18,7 @@ const Navbar = (props: Props) => {
       </Link>
 
       <DropdownMenu>
-        <DropdownMenuTrigger>
+        <DropdownMenuTrigger className="focus:outline-none">
           <Avatar>
             <AvatarImage src="https://github.com/shadcn.png" alt="shadcn" />
             <AvatarFallback className="text-black">BT</AvatarFallback>
@@ -27,10 +27,13 @@ const Navbar = (props: Props) => {
         <DropdownMenuContent>
           <DropdownMenuLabel>My Account</DropdownMenuLabel>
           <DropdownMenuSeparator />
-          <DropdownMenuItem>Profile</DropdownMenuItem>
-          <DropdownMenuItem>Billing</DropdownMenuItem>
-          <DropdownMenuItem>Team</DropdownMenuItem>
-          <DropdownMenuItem>Subscription</DropdownMenuItem>
+
+          <DropdownMenuItem>
+            <Link href="/profile">Profile</Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <Link href="/auth">Logout</Link>
+          </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
     </header>
